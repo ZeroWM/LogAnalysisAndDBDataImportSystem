@@ -8,8 +8,9 @@ import jdk.dynalink.beans.StaticClass;
 
 /**
  * DayZ服务器日志分析定时任务
- * <p>
- * 作者：豆芽 Dora 版权：版权：DayZ金三角服务器所有，仅可用于非盈利服务器
+ *
+ * 作者：豆芽 Dora
+ * 版权：DayZ金三角服务器所有，仅可用于非盈利服务器
  */
 public class AnalysisDayZTask {
 
@@ -18,15 +19,15 @@ public class AnalysisDayZTask {
    */
 
   public static void main(String[] args) {
-//    File file = new File("/Users/wm/Downloads/ZhengShiFu_2021_09_24_055229001.ADM");
+    File file = new File("/Users/wm/Downloads/ZhengShiFu_2021_09_24_055229001.ADM");
 
-    File file = new File("/Users/wm/Downloads/loli-24.rtf");
+//    File file = new File("/Users/wm/Downloads/loli-24.rtf");
     String result = txt2String(file);
     System.out.printf(result);
   }
 
-  //placed Car Tent
-  //Dismantled Lower Frame from Fence with Hatchet\
+  //placed Car Tent 放置汽车帐篷
+  //Dismantled Lower Frame from Fence with Hatchet 采用小手斧拆墙
   public static String txt2String(File file) {
     StringBuilder result = new StringBuilder();
     try {
