@@ -18,19 +18,27 @@ public class AnalysisDayZTask {
    */
 
   public static void main(String[] args) {
-    File file = new File("/Users/wm/Downloads/ZhengShiFu_2021_09_24_055229001.ADM");
+//    File file = new File("/Users/wm/Downloads/ZhengShiFu_2021_09_24_055229001.ADM");
+
+    File file = new File("/Users/wm/Downloads/loli-24.rtf");
     String result = txt2String(file);
     System.out.printf(result);
   }
 
+  //placed Car Tent
+  //Dismantled Lower Frame from Fence with Hatchet\
   public static String txt2String(File file) {
     StringBuilder result = new StringBuilder();
     try {
       BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
       String str = null;
       while ((str = bufferedReader.readLine()) != null) {
-        if (str.contains("loli")) {
-          result.append(System.lineSeparator() + str);
+        if (str.contains("Tent")) {
+          result.append(System.lineSeparator() + str.replace("Tent","放置帐篷"));
+        }
+        if(str.contains("Dismantled Lower Frame from Fence with Hatchet")){
+          result.append(System.lineSeparator() + str.replace("Dismantled Lower Frame from Fence with Hatchet","通过小手斧拆墙"));
+
         }
       }
       bufferedReader.close();
