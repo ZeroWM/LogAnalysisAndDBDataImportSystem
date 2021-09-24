@@ -31,10 +31,3 @@ node_modules/
 /.nb-gradle/
 
 .env
-
-api/orgs
-api/servings
-api/users
-api/finance
-api/node_modules
-api/api
