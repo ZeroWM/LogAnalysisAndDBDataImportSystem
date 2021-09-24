@@ -29,5 +29,7 @@ node_modules/
 /dist/
 /nbdist/
 /.nb-gradle/
+/.idea
+/lib
 
 .env
