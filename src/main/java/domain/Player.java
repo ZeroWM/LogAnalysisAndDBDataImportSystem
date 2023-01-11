@@ -4,7 +4,7 @@ package domain;
  * 玩家信息和行为
  *
  * 作者：豆芽 Dora
- * 版权：DayZ金三角服务器所有，仅可用于非盈利服务器
+ * 版权：Dora
  */
 public class Player {
   //姓名

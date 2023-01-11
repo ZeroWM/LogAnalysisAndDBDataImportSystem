@@ -6,31 +6,28 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class AnalysisOpenbayesTask {
+/**
+ * 日志分析
+ */
+public class AnalysisOpenbayesLog {
 
-  /** 1. 读取文件, 设计实体 2. 数据代码入库 3. 页面展示数据，分页查询，并支持根据关键字搜索 */
   public static void main(String[] args) {
     // 1.读取本地文件
     File file = new File("/Users/wangmei/Downloads/log.txt");
 
-    // 3.解析日志并打印log
-    String result = txt2String(file);
-    System.out.printf(result);
+    // 2.解析日志并打印log
+    txt2String(file);
   }
 
-  public static String txt2String(File file) {
+  public static void txt2String(File file) {
     try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/openbayes_analysis", "mysql", "mysql");
         PreparedStatement stmt = conn.prepareStatement("insert into resource_log values(?,?,?,?,?,?,?)");
     ) {
-      // Execute a query
-
-      StringBuilder result = new StringBuilder();
       try {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String str = null;
@@ -90,6 +87,5 @@ public class AnalysisOpenbayesTask {
     }catch (Exception e){
       e.printStackTrace();
     }
-    return null;
   }
 }

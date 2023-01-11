@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-/** DayZ服务器日志分析定时任务 作者：豆芽 Dora 版权：DayZ金三角服务器所有，仅可用于非盈利服务器 */
-public class AnalysisDayZTask {
+/** DayZ服务器日志分析定时任务 作者：豆芽 Dora 版权：Dora */
+public class AnalysisDayZLog {
 
   /** 1. 读取文件, 设计实体 2. 数据代码入库 3. 页面展示数据，分页查询，并支持根据关键字搜索 */
   public static void main(String[] args) {
